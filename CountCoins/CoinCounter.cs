@@ -12,6 +12,13 @@ namespace CountCoins
             {
                 changeOptions.Add(coins[0]);
             }
+            else
+            {
+                var maxCoinAmount = coins[1];
+                var minRemainder = 100 - maxCoinAmount;
+                // var counted =
+
+            }
             return changeOptions.Count;
         }
     }

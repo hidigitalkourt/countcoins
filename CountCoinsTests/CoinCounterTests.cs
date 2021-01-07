@@ -21,5 +21,16 @@ namespace CountCoinsTests
 
             actual.Should().Be(expected);
         }
+
+        [Fact]
+        public void GivesBackNumberOfChangeOptionsWhenGivenPenniesAndNickels()
+        {
+            var input = new int[]{1, 5};
+            var actual = 19;
+
+            var expected = CoinCounter.GetTotalChangeOptions(input);
+
+            actual.Should().Be(expected);
+        }
     }
 }
