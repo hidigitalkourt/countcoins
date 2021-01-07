@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CountCoins
 {
@@ -6,7 +7,12 @@ namespace CountCoins
     {
         public static int GetTotalChangeOptions(int[] coins)
         {
-            return 0;
+            var changeOptions = new List<int>();
+            if (coins.Length == 1)
+            {
+                changeOptions.Add(coins[0]);
+            }
+            return changeOptions.Count;
         }
     }
 }
