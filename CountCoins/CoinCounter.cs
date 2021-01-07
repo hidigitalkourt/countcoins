@@ -7,19 +7,21 @@ namespace CountCoins
     {
         public static int GetTotalChangeOptions(int[] coins)
         {
-            var changeOptions = new List<int>();
+            var tally = new List<int>();
             if (coins.Length == 1)
             {
-                changeOptions.Add(coins[0]);
+                tally.Add(1);
             }
             else
             {
                 var maxCoinAmount = coins[1];
                 var minRemainder = 100 - maxCoinAmount;
-                // var counted =
-
+                for (var count = 0; count < minRemainder; count+=maxCoinAmount)
+                {
+                    tally.Add(1);
+                }
             }
-            return changeOptions.Count;
+            return tally.Count;
         }
     }
 }

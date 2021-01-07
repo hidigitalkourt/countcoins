@@ -32,5 +32,27 @@ namespace CountCoinsTests
 
             actual.Should().Be(expected);
         }
+
+        [Fact]
+        public void GivesBackNumberOfChangeOptionsWhenGivenPenniesAndDimes()
+        {
+            var input = new int[]{1, 10};
+            var actual = 9;
+
+            var expected = CoinCounter.GetTotalChangeOptions(input);
+
+            actual.Should().Be(expected);
+        }
+
+        [Fact]
+        public void GivesBackNumberOfChangeOptionsWhenGivenPenniesAndQuarters()
+        {
+            var input = new int[]{1, 25};
+            var actual = 3;
+
+            var expected = CoinCounter.GetTotalChangeOptions(input);
+
+            actual.Should().Be(expected);
+        }
     }
 }
